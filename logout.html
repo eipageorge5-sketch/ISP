@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logged Out</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="refresh" content="5;URL=$(link-login)">
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <header>
+            <div class="logo">NMA.WIFI<span>.net</span></div>
+            <h2>You are now offline</h2>
+        </header>
+
+        <table style="width: 100%; margin: 20px 0; font-size: 0.9rem; text-align: left; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px;">User:</td><td style="text-align: right;">$(username)</td></tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px;">Used Time:</td><td style="text-align: right;">$(uptime)</td></tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 10px;">Data Used:</td><td style="text-align: right;">$(bytes-out-nice)</td></tr>
+        </table>
+
+        <a href="$(link-login)" class="btn-pay" style="display: block; text-decoration: none;">Login Again</a>
+    </div>
+</body>
+</html>
