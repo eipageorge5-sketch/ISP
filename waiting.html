@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Payment...</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #e2e8f0;
+            border-top: 5px solid #1e40af;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <div class="spinner"></div>
+        <h2>Awaiting M-Pesa PIN</h2>
+        <p style="margin: 15px 0; color: #64748b;">
+            Check your phone and enter your M-Pesa PIN to complete the transaction.
+        </p>
+        <div class="note" style="background: #fffbeb; padding: 15px; border-radius: 12px; font-size: 0.85rem; border: 1px solid #fde68a;">
+            <strong>Note:</strong> This page will automatically refresh once payment is received.
+        </div>
+    </div>
+</body>
+</html>
