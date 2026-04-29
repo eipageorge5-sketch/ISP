@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to High-Speed WiFi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">NMA.WIFI<span>.net</span></div>
+            <p>Select a plan to start browsing</p>
+        </header>
+
+        <div class="plans">
+            <div class="plan-card" onclick="selectPlan('1hr', 20)">
+                <h3>1 Hour</h3>
+                <p class="price">KSh 20</p>
+            </div>
+            <div class="plan-card active" onclick="selectPlan('24hr', 50)">
+                <h3>24 Hours</h3>
+                <p class="price">KSh 50</p>
+            </div>
+            <div class="plan-card" onclick="selectPlan('7days', 350)">
+                <h3>1 Week</h3>
+                <p class="price">KSh 350</p>
+            </div>
+        </div>
+
+        <form action="/login" method="post">
+            <div class="input-group">
+                <label for="phone">M-Pesa Number</label>
+                <input type="tel" id="phone" name="username" placeholder="0700023496" required>
+            </div>
+            
+            <input type="hidden" name="password" id="password" value="wifi123">
+            <input type="hidden" name="dst" value="http://google.com">
+
+            <button type="submit" class="btn-pay">Pay with M-Pesa</button>
+        </form>
+
+        <footer>
+            <p>Already have a voucher? <a href="#">Click here</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
