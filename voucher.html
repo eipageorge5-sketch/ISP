@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Voucher Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Voucher<span>Entry</span></div>
+            <p>Enter the code from your scratch card</p>
+        </header>
+
+        <form action="$(link-login-only)" method="post">
+            <input type="hidden" name="dst" value="$(link-orig)">
+            <input type="hidden" name="popup" value="true">
+            
+            <div class="input-group">
+                <label for="user">Voucher Code</label>
+                <input type="text" id="user" name="username" placeholder="e.g. 882910" required>
+            </div>
+            
+            <input type="hidden" name="password" value="">
+
+            <button type="submit" class="btn-pay">Activate Internet</button>
+        </form>
+
+        <footer>
+            <p><a href="login.html">Back to M-Pesa Payment</a></p>
+        </footer>
+    </div>
+</body>
+</html>
