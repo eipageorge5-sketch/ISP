@@ -1,0 +1,82 @@
+:root {
+    --primary: #1e40af; /* Deep Blue */
+    --accent: #f59e0b;  /* M-Pesa Yellow */
+    --bg: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.8);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body {
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid white;
+}
+
+header { text-align: center; margin-bottom: 30px; }
+.logo { font-size: 2rem; font-weight: 800; color: var(--primary); }
+.logo span { color: var(--accent); }
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.plan-card {
+    background: white;
+    padding: 15px 10px;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.plan-card.active {
+    border-color: var(--primary);
+    background: #eff6ff;
+}
+
+.plan-card h3 { font-size: 0.8rem; opacity: 0.7; }
+.price { font-weight: bold; font-size: 1.1rem; margin-top: 5px; }
+
+.input-group { margin-bottom: 20px; }
+label { display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; }
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-size: 1rem;
+}
+
+.btn-pay {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(30, 64, 175, 0.2);
+}
+
+footer { margin-top: 20px; text-align: center; font-size: 0.85rem; color: #64748b; }
